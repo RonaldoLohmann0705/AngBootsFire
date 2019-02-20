@@ -1,0 +1,16 @@
+<div class="form-group">
+  <label for="txtName">Nome do Filme</label>
+  <input type="text" id="txtName" class="form-control" ng-model="Item.nome" readonly="true"/>
+</div>
+<div class="form-group">
+  <label for="txtPicUrl">URL do cartaz</label>
+  <input type="text" id="txtPicUrl" class="form-control" ng-model="Item.picUrl" readonly="true"/>
+</div>
+<div class="form-group">
+  <label for="txtDesc"> Descrição breve do filme</label>
+  <input type="text" id="txtDesc" class="form-control" ng-model="Item.desc"/>
+</div>
+<div class="form-group">
+  <button class="btn btn-primary" ng-click="save()">Salvar</button>
+  <button class="btn btn-primary" ng-click="cancel()">Cancelar</button>
+</div>

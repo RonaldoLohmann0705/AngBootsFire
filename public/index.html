@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" 
+      src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+	  <script data-require="angular-router@*" data-semver="1.2.0-rc1" 
+      src="https://code.angularjs.org/1.2.0rc1/angular-route.js"></script>
+    <link data-require="bootstrap-css@*" data-semver="3.2.0" rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDi0ifXR05GvmNy8-qMF6yn4JlsJ5odLzQ",
+    authDomain: "crud-e89a9.firebaseapp.com",
+    databaseURL: "https://crud-e89a9.firebaseio.com",
+    projectId: "crud-e89a9",
+    storageBucket: "crud-e89a9.appspot.com",
+    messagingSenderId: "255292566765"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+  <div class="container-fluid">
+    <div class="row">
+      <div col="col-xs-12"></div>
+      <h2>
+          <i class="far fa-caret-square-right"></i>
+Catálogo de Filmes</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+       <div ng-view=""></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>

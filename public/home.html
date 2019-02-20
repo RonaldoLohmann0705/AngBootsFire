@@ -1,0 +1,25 @@
+<div class="form-group">
+	<input type="text" class="form-control" id="search" placeholder="Buscar filme..." data-ng-model="search" />
+        </div>
+        <table class="table table-stripped table-hover">
+          <tbody>
+            <tr>
+              <th>
+                <i class="far fa-caret-square-right"></i>
+              </th>
+              <th>Nome</th>
+              <th>Descrição</th>
+			  <th>Delete</th>
+            </tr>
+            <tr data-ng-repeat="item in data | filter:search" ng-click="editMovie(item.$id)">
+              <td><img src={{item.picUrl}} class="moviePic" alt="Responsive image" width="150"></td>
+              <td>{{item.nome}}</td>
+              <td>{{item.desc}}</td>
+			  <td><button class="btn btn-primary" ng-click="delete(item.$id)">Excluir</button></td>
+            </tr>
+            <tr></tr>
+          </tbody>
+        </table>
+        <div class="form-group">
+        <button ng-click="addMovie()" class="btn btn-primary"> Adicionar Filme</button>
+          </div>
